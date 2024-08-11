@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Email Template</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F2F5FF;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-spacing: 0;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #e3e9fc;
+        }
+
+        img {
+            border: 0;
+            display: block;
+            width: 100%;
+
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .header, .footer {
+
+            text-align: center;
+        }
+
+        .header img {
+            max-width: 100px;
+            height: auto;
+                display: block;
+    margin-left: auto;
+    margin-right: auto
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            color: #303A5A;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .content p {
+            color: #656565;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+
+
+        .content1 {
+            padding: 20px;
+            text-align: center;
+            background: #373950;
+            color: white;
+        }
+
+        .content1 h1 {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .content1 p {
+            color: white;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+
+        .frame {
+
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+      .game-container {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .game-container img {
+        max-width: 250px;
+        max-height: 250px;
+        margin-right: 20px;
+        border: 7px #DA2E71 solid;
+    }
+
+    .game-title {
+        font-size: 20px;
+        color: #303A5A;
+    }
+
+    .game-description {
+        color: #656565;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 5px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .game-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .game-container img {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .game-title {
+            font-size: 18px;
+        }
+
+        .game-description {
+            font-size: 13px;
+        }
+    }
+        .game-description {
+            color: #656565;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            border: 4px solid #DA2E71;
+            color: #000000;
+            padding: 10px 60px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #DA2E71;
+            color: #FFFFFF;
+        }
+
+
+        .btn4 {
+            display: inline-block;
+            background-color: #DA2E71;
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+
+         .btn1 {
+            display: inline-block;
+            background-color: #DA2E71;
+
+            color: white;
+            padding: 10px 60px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn1:hover {
+            background-color: #DA2E71;
+            color: #FFFFFF;
+        }
+
+.horizontal-images {
+    display: flex;
+    overflow-x: auto;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.overlay {
+    position: relative;
+
+
+}
+
+.overlay div {
+   margin-top: 50px;
+   }
+
+.overlay img {
+    display: block;
+}
+
+.game-title_green {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #06C270;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.footer {
+    background-color: #303A5A;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-column {
+    width: 45%;
+    text-align: left;
+}
+
+.footer-button {
+    text-align: right;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background-color: #303a5a;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.9;
+    line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
+        }
+
+@media screen and (max-width: 600px) {
+    .footer-columns {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-bottom {
+    background-color: #252638;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.9;
+    line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
+        }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+.block {
+    display: flex;
+    background-color: #303a5a;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+.block-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.block-text {
+    color: #ffffff;
+    max-width: 55%;
+}
+
+.block-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.block-subtext {
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+.block-button {
+    display: flex;
+    align-items: center;
+}
+
+
+.btn3 {
+    background: #DA2E71;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    border-radius: 8px #DA2E71;
+    font-weight: bold;
+    margin: 50px 0;
+}
+.btn2 {
+    background: linear-gradient(90deg, #FF3B3B, #6600CC);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+border-radius: 8px;
+    font-weight: bold;
+}
+.btn1 {
+    background: linear-gradient(90deg, #3E7BFA, #6600CC);
+    color: #ffffff;
+    padding: 10px 16px;
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.block:first-child {
+    background: linear-gradient(90deg, #ff4a85 0%, #6148e0 100%);
+}
+
+
+.block:last-child {
+    background: linear-gradient(90deg, #6148e0 0%, #00a3ff 100%);
+}
+
+
+.question-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #303a5a;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 2px dashed #b0b0b0;
+    border-bottom: 2px dashed #b0b0b0;
+}
+
+.question-text {
+    color: #ffffff;
+
+}
+
+.question-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 30px;
+}
+
+.question-subtext {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #b0b0b0;
+    margin-left: 30px;
+}
+
+
+.question-button .btn {
+    background: linear-gradient(90deg, #ff4a85 0%, #6148e0 100%);
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.question-button .btn::before {
+
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+    .btn1 {
+    padding: 10px 20px;
+
+}
+
+    </style>
+</head>
+<body>
+<table role="presentation">
+    <!-- Header -->
+    <tr>
+        <td class="header">
+            <img src="https://www.freeiconspng.com/uploads/classic-togg-logo-png-4.png">
+        </td>
+    </tr>
+
+    <!-- Main Content -->
+    <tr>
+        <td class="content">
+            <h1>Neque porro quisquam est qui dolorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+            <div class="frame">
+                <div class="game-container">
+                    <img src="https://static.casino.guru/pict/145227/Fruity-Crown.png?timestamp=1653461523000&imageDataId=251721&width=320&height=247" alt="Game Image 1">
+                    <div>
+                        <h2 class="game-title">Fruity crown від Playson</h2>
+                        <p class="game-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in turpis leo. Aliquam erat volutpat.</p>
+                    </div>
+                </div>
+
+                <div class="game-container">
+                    <img src="https://static.casino.guru/pict/145227/Fruity-Crown.png?timestamp=1653461523000&imageDataId=251721&width=320&height=247" alt="Game Image 2">
+                    <div>
+                        <h2 class="game-title">Fruity crown від Playson</h2>
+                        <p class="game-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in turpis leo. Aliquam erat volutpat.</p>
+                    </div>
+                </div>
+
+                <div class="game-container">
+                    <img src="https://static.casino.guru/pict/145227/Fruity-Crown.png?timestamp=1653461523000&imageDataId=251721&width=320&height=247" alt="Game Image 3">
+                    <div>
+                        <h2 class="game-title">Fruity crown від Playson</h2>
+                        <p class="game-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in turpis leo. Aliquam erat volutpat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn">Грати</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="content1">
+            <h1>Neque porro quisquam est qui dolorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+            <div class="horizontal-images">
+                <div class="image-container">
+                    <div class="overlay"><img src="https://www.livebet.com/images/casino/slots/playson/divine-dragon-hold-and-win.webp" alt="Game Image 4">
+                        Game Title</div>
+                    <div class="game-title_green">€458,658.12</div>
+                </div>
+                <div class="image-container">
+                    <div class="overlay"><img src="https://www.livebet.com/images/casino/slots/playson/divine-dragon-hold-and-win.webp" alt="Game Image 4">
+                        Game Title</div>
+                    <div class="game-title_green">€458,658.12</div>
+                </div>
+                <div class="image-container">
+                    <div class="overlay"><img src="https://www.livebet.com/images/casino/slots/playson/divine-dragon-hold-and-win.webp" alt="Game Image 4">
+                        Game Title</div>
+                    <div class="game-title_green">€458,658.12</div>
+                </div>
+            </div>
+    </tr>
+
+
+    <tr>
+        <td style="text-align: center;  padding: 20px; background: #373950;">
+            <a href="#" style="display: inline-block; margin-top: 20px; background-color: #DA2E71;
+color: #FFFFFF; padding: 15px 70px; text-decoration: none; border-radius: 8px; font-weight: bold;">Грати</a>
+        </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+        <td class="footer">
+            <div class="container" style="padding-top: 0; padding-bottom: 0;">
+                <!-- Перший блок -->
+                <div class="block">
+                    <div class="block-content">
+                        <div class="block-text">
+                            <p class="block-title">
+                                <i class="fas fa-mobile-alt" style="color: #fff; margin-right: 8px;"></i>
+                                Встановлюйте додаток та отримуйте бонус
+                            </p>
+                            <p class="block-subtext">Для встановлення додатка переходьте за посиланням або натисніть кнопку "Завантажити"</p>
+                        </div>
+                        <div class="block-button">
+                            <a href="#" class="btn2">
+                                <i class="fas fa-download" style="color: #fff; margin-right: 8px;"></i>
+                                Завантажити
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Другий блок -->
+                <div class="block">
+                    <div class="block-content">
+                        <div class="block-text">
+                            <p class="block-title">
+                                <i class="fas fa-bell" style="color: #fff; margin-right: 8px;"></i>
+                                Будь завжди з нами на зв'язку! Підключай Telegram Bot
+                            </p>
+                        </div>
+                        <div class="block-button">
+                            <a href="#" class="btn1">
+                                <i class="fab fa-telegram-plane" style="color: #fff; margin-right: 8px;"></i>
+                                Підключитися
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 0;">
+            <div class="question-block">
+                <div class="question-text">
+                    <p class="question-title">
+
+                        Залишились питання?
+                    </p>
+                    <p class="question-subtext">Наші фахівці допоможуть розібратися</p>
+                </div>
+                <div class="question-button">
+                    <a href="#" class="btn4">
+                        <i class="fas fa-phone" style="color: #fff; margin-right: 8px;"></i>
+                        Замовити дзвінок
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="footer-bottom">
+            Ви отримали цей лист, тому що зареєстровані на google.com та підтвердили свою згоду з Правилами та Умовами. Для того, щоб відписатися від розсилки, натисніть на <span style=" text-decoration: underline; color: #DA2E71; cursor: pointer;">посилання</span>.
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
